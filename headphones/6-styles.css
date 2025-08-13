@@ -1,0 +1,85 @@
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* SECTION ONE - Main Background */
+.section-one {
+  width: 1400px;
+  height: 640px;
+  margin: 0 auto;
+  position: relative; /* For overlay positioning */
+  background: url('headphones_hero_2.jpg') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-one h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.section-one p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  color: white;
+}
+
+/* SECTION TWO - Overlay with 4 pentagons */
+.section-two {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Each box becomes a pentagon */
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: #FF6565;
+
+  /* Create pentagon shape */
+  clip-path: polygon(
+    50% 0%, 
+    90% 35%, 
+    73% 100%, 
+    27% 100%, 
+    10% 35%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  transition: transform 0.3s ease;
+}
+
+/* Optional: hover animation */
+.box:hover {
+  transform: scale(1.1);
+}
+
+.box h1 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.box p {
+  font-size: 0.9rem;
+}
